@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="01847432-c179-4bc5-8504-f0400b78a3bb" name="ka" url="http://139.129.128.42">
+        <fileTransfer host="139.129.128.42" port="2236" rootFolder="/home/wwwroot/ka.i5zw.com/ka" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="2236" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
