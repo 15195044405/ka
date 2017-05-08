@@ -28,6 +28,8 @@ class Login extends Controller
      * 注册
      */
     public function sign(){
+        echo '<pre>';
         dump($_SERVER);
+        exit;
     }
 }
