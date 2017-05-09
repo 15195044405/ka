@@ -9,10 +9,10 @@
 namespace app\index\controller;
 
 
-use think\Controller;
 use think\Request;
 
-class Login extends Controller
+
+class Login extends Common
 {
     public function index(){
 
