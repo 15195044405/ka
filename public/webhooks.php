@@ -12,7 +12,7 @@ $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 if ($signature) {
   $hash = "sha1=" . hash_hmac('sha1', $HTTP_RAW_POST_DATA, $secret);
   if (strcmp($signature, $hash) == 0) {
-      $cmd = "/usr/bin/cd {$path} && /usr/bin/sudo /usr/bin/git pull origin master";
+      $cmd = "cd {$path} && git fetch --all && git reset --hard origin/master && git pull";
       $optput = shell_exec($cmd);
       echo "ok";
       exit();
