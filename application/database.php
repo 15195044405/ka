@@ -17,9 +17,9 @@ return [
     // 数据库名
     'database'        => 'ka',
     // 用户名
-    'username'        => 'zavier',
+    'username'        => 'root',
     // 密码
-    'password'        => 'zavier',
+    'password'        => '123.zw.~~',
     // 端口
     'hostport'        => '3326',
     // 连接dsn
