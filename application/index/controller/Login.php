@@ -9,7 +9,9 @@
 namespace app\index\controller;
 
 
+use app\index\model\User;
 use think\Request;
+use think\Session;
 
 
 class Login extends Common
@@ -26,12 +28,17 @@ class Login extends Common
     }
 
     /**
+     * @param bool $data
+     *
      * 注册
      */
-    public function sign(){
-        echo '<pre>';
-        dump($_SERVER);
-        exit;
+    public function sign($data=false){
+        if($data){
+            $user = new User();
+            $user->save(json_decode($data));
+        }else{
+
+        }
     }
 
     /**
@@ -39,7 +46,11 @@ class Login extends Common
      */
     public function send_sms(){
         if(Request::instance()->isPost()){
-            dump($_POST);exit;
+            //目前没有开通短信接口，直接返回一个随机数
+            $sms = mt_rand(000000,999999);
+            $data = file_get_contents("php://input");
+            $this->sign($data);
+            dump($data);
         }
     }
 }
