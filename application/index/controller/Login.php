@@ -38,8 +38,8 @@ class Login extends Controller
      * @return string
      */
     public function send_sms(){
-        if(Request::instance()->isGet()){
-            dump($_GET);exit;
+        if(Request::instance()->isPost()){
+            dump($_POST);exit;
         }
     }
 }
