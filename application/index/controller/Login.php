@@ -10,6 +10,7 @@ namespace app\index\controller;
 
 
 use think\Controller;
+use think\Request;
 
 class Login extends Controller
 {
@@ -31,5 +32,14 @@ class Login extends Controller
         echo '<pre>';
         dump($_SERVER);
         exit;
+    }
+
+    /**
+     * @return string
+     */
+    public function send_sms(){
+        if(Request::instance()->isGet()){
+            dump($_GET);exit;
+        }
     }
 }
